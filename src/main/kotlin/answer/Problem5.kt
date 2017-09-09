@@ -1,8 +1,7 @@
-package ansers
+package answer
 
 import runtime.IGame
 import runtime.ImageManager
-import java.awt.Color
 import java.awt.Graphics
 import java.awt.Image
 

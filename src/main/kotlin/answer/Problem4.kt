@@ -1,12 +1,11 @@
-package ansers
+package answer
 
 import runtime.IGame
 import runtime.ImageManager
-import java.awt.Color
 import java.awt.Graphics
 import java.awt.Image
 
-class Problem3 : IGame() {
+class Problem4 : IGame() {
 
     var x: Int = 0
     var y: Int = 0
@@ -20,19 +19,27 @@ class Problem3 : IGame() {
 
     override fun process(pushedKey: Int) {
         if(isPushKey(KEY_UP)) {
-            y -= 1
-            currentImage = back
+            if(y > 0) {
+                y -= 4
+                currentImage = back
+            }
         }
         if(isPushKey(KEY_DOWN)) {
-            y += 1
-            currentImage = front
+            if(y < 600 - 32) {
+                y += 4
+                currentImage = front
+            }
         }
         if(isPushKey(KEY_LEFT)) {
-            x -= 1
-            currentImage = left
+            if(x > 0) {
+                x -= 4
+                currentImage = left
+            }
         }
         if(isPushKey(KEY_RIGHT)) {
-            x += 1
+            if(x < 800 - 32) {
+                x += 4
+            }
             currentImage = right
         }
     }

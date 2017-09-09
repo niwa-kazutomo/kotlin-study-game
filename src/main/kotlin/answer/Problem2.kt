@@ -1,4 +1,4 @@
-package ansers
+package answer
 
 import runtime.IGame
 import java.awt.Color
