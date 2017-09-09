@@ -12,7 +12,7 @@ import java.awt.Image
 // 人の画像の大きさは 幅32ピクセル, 高さ32ピクセル です。
 // 右に移動する時と下に移動する時 の画面外に出ていかないようにするプログラムの判定の参考にしてください。
 //
-// 画面外に出しやすいように移動速度を5倍に変えてあります。
+// 画面外に出しやすいように移動速度を4倍に変えてあります。
 class Problem4 : IGame() {
 
     var x: Int = 0
@@ -29,20 +29,20 @@ class Problem4 : IGame() {
         if(isPushKey(KEY_UP)) {
             if(y > 0) {
                 // y の値が 0 よりも大きい場合にだけ y の値をマイナスします。
-                y -= 5
+                y -= 4
                 currentImage = back
             }
         }
         if(isPushKey(KEY_DOWN)) {
-            y += 5
+            y += 4
             currentImage = front
         }
         if(isPushKey(KEY_LEFT)) {
-            x -= 5
+            x -= 4
             currentImage = left
         }
         if(isPushKey(KEY_RIGHT)) {
-            x += 5
+            x += 4
             currentImage = right
         }
     }
